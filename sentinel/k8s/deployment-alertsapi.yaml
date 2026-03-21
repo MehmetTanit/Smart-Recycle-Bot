@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alertsapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alertsapi
+  template:
+    metadata:
+      labels:
+        app: alertsapi
+    spec:
+      containers:
+        - name: alertsapi
+          image: sentinel-alerts-api:latest
+          envFrom:
+            - secretRef:
+                name: secret-openai
+            - configMapRef:
+                name: configmap-sentinel
+          ports:
+            - containerPort: 8080

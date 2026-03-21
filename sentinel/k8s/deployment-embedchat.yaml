@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: embedchat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: embedchat
+  template:
+    metadata:
+      labels:
+        app: embedchat
+    spec:
+      containers:
+        - name: embedchat
+          image: sentinel-embed-chat:latest
+          envFrom:
+            - secretRef:
+                name: secret-openai
+            - configMapRef:
+                name: configmap-sentinel
+          stdin: true
+          tty: true
+          command: ["bash","-lc","python sentinel_agent.py"]

@@ -1,0 +1,22 @@
+[
+  {"title": "Glasflasche (wasser)", "content": "Eine leere Glasflasche für Mineralwasser mit Etikett.", "tags": ["bottle","glass","drink"], "category": "glass"},
+  {"title": "Plastiktüte", "content": "Eine dünne Plastiktüte vom Supermarkt, leicht verschmutzt.", "tags": ["bag","plastic","shopping"], "category": "plastic"},
+  {"title": "Bananenschale", "content": "Obstreste: Bananenschale, organischer Abfall.", "tags": ["organic","food","peel"], "category": "bio"},
+  {"title": "Zeitung (alt)", "content": "Mehrere Seiten einer alten Zeitung, trocken.", "tags": ["paper","news","recycling"], "category": "paper"},
+  {"title": "Alte Batterie (AA)", "content": "Verbrauchte AA Batterie, enthält Schadstoffe.", "tags": ["battery","hazard","electronics"], "category": "hazard"},
+  {"title": "Joghurtbecher (Kunststoff)", "content": "Leerer Joghurtbecher aus Kunststoff, mit Resten.", "tags": ["container","plastic","food"], "category": "plastic"},
+  {"title": "Konservendose", "content": "Leere Konservendose aus Metall, leicht eingedellt.", "tags": ["can","metal","food"], "category": "metal"},
+  {"title": "Glas (zerbrochen)", "content": "Ein scharfkantiges Stück zerbrochenes Glas, Vorsicht.", "tags": ["glass","sharp","broken"], "category": "glass"},
+  {"title": "Kaffeefilter Papier", "content": "Ein benutzter Papier-Kaffeefilter, kompostierbar.", "tags": ["paper","organic","filter"], "category": "bio"},
+  {"title": "Styroporverpackung", "content": "Leichte Styroporverpackung von einem Elektronikartikel.", "tags": ["styrofoam","packaging","plastic"], "category": "residual"},
+  {"title": "Alte Kleidung (T-Shirt)", "content": "Abgetragenes Baumwoll-T-Shirt, noch tragbar oder spenden.", "tags": ["textile","clothes","cotton"], "category": "textile"},
+  {"title": "Elektronisches Gerät (Handy)", "content": "Altes Smartphone, Akku nicht entfernt.", "tags": ["electronics","device","battery"], "category": "electronic_waste"},
+  {"title": "Kartonschachtel", "content": "Kleine Kartonschachtel von einem Paket, gefaltet.", "tags": ["cardboard","box","recycle"], "category": "paper"},
+  {"title": "Glas Marmeladenglas", "content": "Ein leeres Marmeladenglas mit Deckel.", "tags": ["jar","glass","food"], "category": "glass"},
+  {"title": "Kunststoffflasche (PET)", "content": "PET-Getränkeflasche, zusammengedrückt.", "tags": ["bottle","plastic","pet"], "category": "plastic"},
+  {"title": "Grüner Gartenabfall", "content": "Äste und Grünabfälle vom Pflanzenrückschnitt.", "tags": ["garden","organic","green"], "category": "bio"},
+  {"title": "Toilettenpapierrolle (Pappe)", "content": "Leere Papprolle vom Toilettenpapier.", "tags": ["paper","cardboard","toilet"], "category": "paper"},
+  {"title": "Ceranfeld Rest", "content": "Reste von Keramik einer alten Kochplatte.", "tags": ["ceramic","hazard","glass"], "category": "residual"},
+  {"title": "Alte Glühbirne (Zerbrochen)", "content": "Glühbirne mit Metallfassung, zerbrochen.", "tags": ["lightbulb","glass","hazard"], "category": "hazard"},
+  {"title": "Metallbügel (Kleiderbügel)", "content": "Dünner Metallbügel von einem Hemd.", "tags": ["metal","hanger","recycle"], "category": "metal"}
+]

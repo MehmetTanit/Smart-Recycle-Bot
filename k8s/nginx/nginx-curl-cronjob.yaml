@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: nginx-curl-job
+spec:
+  
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: curl
+              image: curlimages/curl:latest
+              imagePullPolicy: IfNotPresent
+              args:
+                - /bin/sh
+                - -c
+                - >
+                  echo "[$(date)] Checking nginx-svc...";
+                  curl -s -o /dev/null -w "%{http_code}\n" http://nginx-svc.default.svc.cluster.local;
+          restartPolicy: OnFailure
