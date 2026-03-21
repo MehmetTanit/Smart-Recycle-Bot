@@ -7,7 +7,7 @@ from openai import OpenAI
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 QDRANT_URL     = os.environ.get("QDRANT_URL", "http://localhost:6333")
-COLLECTION     = os.environ.get("QDRANT_COLLECTION", "sentinel_docs")
+COLLECTION     = os.environ.get("QDRANT_COLLECTION", "recycle_docs")
 EMBED_MODEL    = os.environ.get("EMBED_MODEL", "text-embedding-3-small")
 TOP_K          = int(os.environ.get("TOP_K", "5"))
 MIN_SCORE      = float(os.environ.get("MIN_SCORE", "0.65"))
@@ -15,7 +15,7 @@ WRAP_COLS      = int(os.environ.get("WRAP_COLS", "100"))
 
 BLOCK_WORDS = {"password", "admin access", "bypass", "prompt injection"}
 
-SENTINEL_SYSTEM_PROMPT = """(siehe README: SYSTEM PROMPT (SentinelAI))"""
+SENTINEL_SYSTEM_PROMPT = """(siehe README: SYSTEM PROMPT (Smart Recycle Bot))"""
 
 
 def _die(msg, code=2):
@@ -115,7 +115,7 @@ def run_chat():
         blocked = BLOCK_WORDS
 
     client = OpenAI(api_key=OPENAI_API_KEY)
-    print("SentinelAI – Console-Chat (nur Inhalte aus Qdrant). ':exit' zum Beenden.")
+    print("Smart Recycle AI – Console-Chat (nur Inhalte aus Qdrant). ':exit' zum Beenden.")
     while True:
         try:
             q = input("> ").strip()

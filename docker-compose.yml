@@ -15,7 +15,7 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - QDRANT_URL=http://qdrant:6333
-      - QDRANT_COLLECTION=sentinel_docs
+      - QDRANT_COLLECTION=recycle_docs
     depends_on: [qdrant]
     stdin_open: true
     tty: true
@@ -28,7 +28,7 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - QDRANT_URL=http://qdrant:6333
-      - QDRANT_COLLECTION=sentinel_docs
+      - QDRANT_COLLECTION=recycle_docs
     depends_on: [qdrant]
     ports: ["8080:8080"]
 

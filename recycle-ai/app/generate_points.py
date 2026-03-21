@@ -6,10 +6,9 @@ from pathlib import Path
 from datetime import datetime, timezone
 from openai import OpenAI
 
-ROOT = Path(__file__).resolve().parents[2]  # sentinel/
+ROOT = Path(__file__).resolve().parents[2]
 DATA_FILE = ROOT / 'data' / 'items.json'
 OUT_DIR = ROOT / 'output'
-OUT_DIR_3A = Path(__file__).resolve().parents[4] / '3_Aufgabe' / 'output'
 
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
 EMBED_MODEL = os.environ.get('EMBED_MODEL', 'text-embedding-3-small')
@@ -53,14 +52,10 @@ def make_points(items):
 
 def save_points(points):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    OUT_DIR_3A.mkdir(parents=True, exist_ok=True)
     data = {'points': points}
     out1 = OUT_DIR / 'points.json'
-    out2 = OUT_DIR_3A / 'points.json'
     out1.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
-    out2.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
     print(f"Wrote {len(points)} points to: {out1}")
-    print(f"Also wrote copy to: {out2}")
 
 def main():
     if not OPENAI_API_KEY:

@@ -4,7 +4,7 @@ metadata:
   name: configmap-sentinel
 data:
   QDRANT_URL: "http://qdrant:6333"
-  QDRANT_COLLECTION: "sentinel_docs"
+  QDRANT_COLLECTION: "recycle_docs"
   EMBED_MODEL: "text-embedding-3-small"
   MIN_SCORE: "0.65"
   TOP_K: "5"

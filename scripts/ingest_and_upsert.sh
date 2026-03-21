@@ -6,7 +6,7 @@ ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 EMBED_SCRIPT="$ROOT_DIR/recycle-ai/app/generate_points.py"
 OUT_FILE="$ROOT_DIR/output/points.json"
 QDRANT_URL=${QDRANT_URL:-http://localhost:6333}
-COLLECTION=${QDRANT_COLLECTION:-sentinel_docs}
+COLLECTION=${QDRANT_COLLECTION:-recycle_docs}
 
 if [ -f "$ROOT_DIR/.env" ]; then
   # shellcheck disable=SC1090
@@ -14,7 +14,7 @@ if [ -f "$ROOT_DIR/.env" ]; then
 fi
 
 if [ -z "${OPENAI_API_KEY:-}" ]; then
-  echo "Error: OPENAI_API_KEY not set. Fill sentinel/.env with your key or export OPENAI_API_KEY." >&2
+  echo "Error: OPENAI_API_KEY not set. Fill .env with your key or export OPENAI_API_KEY." >&2
   exit 2
 fi
 

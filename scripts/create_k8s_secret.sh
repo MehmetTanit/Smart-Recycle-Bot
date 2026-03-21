@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Creates/updates the Kubernetes Secret `secret-openai` from a local .env file
-# Usage: copy sentinel/.env.example -> sentinel/.env (fill OPENAI_API_KEY) and run this script
+# Usage: copy .env.example -> .env (fill OPENAI_API_KEY) and run this script
 
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 ENV_FILE="$ROOT_DIR/.env"
