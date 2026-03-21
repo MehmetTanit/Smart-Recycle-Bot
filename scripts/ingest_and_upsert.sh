@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Ingest helper: generates points.json (using OPENAI_API_KEY from env or .env) and upserts to Qdrant
 ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
-EMBED_SCRIPT="$ROOT_DIR/sentinel-embed-chat/app/generate_points.py"
+EMBED_SCRIPT="$ROOT_DIR/recycle-ai/app/generate_points.py"
 OUT_FILE="$ROOT_DIR/output/points.json"
 QDRANT_URL=${QDRANT_URL:-http://localhost:6333}
 COLLECTION=${QDRANT_COLLECTION:-sentinel_docs}

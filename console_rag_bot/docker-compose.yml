@@ -1,6 +1,0 @@
-services:
-  chatbot:
-    build: ./app
-    stdin_open: true
-    tty: true
-    command: ["bash", "-lc", "python chatbot.py"]

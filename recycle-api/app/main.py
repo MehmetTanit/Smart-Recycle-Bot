@@ -14,7 +14,7 @@ TOP_K          = int(os.environ.get("TOP_K","5"))
 
 BLOCK_WORDS = {"password","admin access","bypass","prompt injection"}
 
-app = FastAPI(title="sentinel-alerts-api", version="1.0")
+app = FastAPI(title="recycle-api", version="1.0")
 
 class AnalyzeRequest(BaseModel):
     logline: str

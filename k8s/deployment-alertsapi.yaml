@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: alertsapi
-          image: sentinel-alerts-api:latest
+          image: recycle-api:latest
           envFrom:
             - secretRef:
                 name: secret-openai
