@@ -2,7 +2,7 @@
 
 ## Executive Summary
 Smart Recycle Bot ist ein kleines KI-Projekt, das dabei hilft, Müll richtig zu trennen.
-Die Anwendung nimmt eine kurze Beschreibung eines Gegenstands entgegen,
+Die Anwendung nimmt eine kurze Beschreibung eines Gegenstands entgegen.
 Ordnet ihn einer passenden Entsorgungskategorie zu.
 Im Hintergrund arbeitet eine Vektor-Datenbank (Qdrant), die über semantische Ähnlichkeit passende Beispiele findet.
 Statt einfach irgendetwas zu raten, gibt das System bewusst „unknown“ zurück, wenn es sich nicht sicher genug ist.
@@ -28,8 +28,8 @@ Man schickt zum Beispiel einen Text wie „leere Glasflasche mit Etikett“ an d
 Als Antwort erhält man eine Kategorie, einen Entsorgungshinweis und einen Confidence-Wert.
 Falls die Unsicherheit zu hoch ist, gibt das System bewusst „unknown“ zurück.
 Das macht die Nutzung transparent und nachvollziehbar.
-Der Code ist hier verfügbar: https://github.com/MehmetTanit
-Der Pitch ist hier zu finden: 
+Der Code ist hier verfügbar: https://github.com/MehmetTanit/Smart-Recycle-Bot
+Der Pitch ist hier zu finden: Pitch.m4a
 
 
 ## Entwicklungsstand
