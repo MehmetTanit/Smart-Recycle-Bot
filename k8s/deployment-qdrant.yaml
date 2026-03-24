@@ -12,6 +12,10 @@ spec:
       labels:
         app: qdrant
     spec:
+      tolerations:
+      - key: "node-role.kubernetes.io/control-plane"
+        operator: "Exists"
+        effect: "NoSchedule"
       containers:
       - name: qdrant
         image: qdrant/qdrant:latest

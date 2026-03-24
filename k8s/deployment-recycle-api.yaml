@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recycle-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recycle-api
+  template:
+    metadata:
+      labels:
+        app: recycle-api
+    spec:
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          operator: "Exists"
+          effect: "NoSchedule"
+      containers:
+        - name: recycle-api
+          image: recycle-api:latest
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - secretRef:
+                name: secret-openai
+            - configMapRef:
+                name: configmap-recycle-chat
+          ports:
+            - containerPort: 8080

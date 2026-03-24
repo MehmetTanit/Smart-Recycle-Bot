@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   qdrant:
     image: qdrant/qdrant:latest
@@ -8,10 +7,10 @@ services:
     volumes:
       - qdrant_storage:/qdrant/storage
 
-  embedchat:
+  recycle-chat:
     image: recycle-ai:latest
     build: ./recycle-ai/app
-    container_name: embedchat
+    container_name: recycle-chat
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - QDRANT_URL=http://qdrant:6333
@@ -21,10 +20,10 @@ services:
     tty: true
     command: ["bash","-lc","python sentinel_agent.py"]
 
-  alertsapi:
+  recycle-api:
     image: recycle-api:latest
     build: ./recycle-api/app
-    container_name: alertsapi
+    container_name: recycle-api
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - QDRANT_URL=http://qdrant:6333

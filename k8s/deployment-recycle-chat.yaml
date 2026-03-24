@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recycle-chat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recycle-chat
+  template:
+    metadata:
+      labels:
+        app: recycle-chat
+    spec:
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          operator: "Exists"
+          effect: "NoSchedule"
+      containers:
+        - name: recycle-chat
+          image: recycle-ai:latest
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - secretRef:
+                name: secret-openai
+            - configMapRef:
+                name: configmap-recycle-chat
+          stdin: true
+          tty: true
+          command: ["bash","-lc","python sentinel_agent.py"]
